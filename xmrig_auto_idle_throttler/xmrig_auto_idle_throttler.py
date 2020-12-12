@@ -4,9 +4,11 @@ import subprocess
 import time
 import logging
 
-from xmrig_api_client import XmrigClient
+from .version import __version__
+from .xmrig_api_client import XmrigClient
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s %(levelname)s %(message)s')
 
 RESOLUTION_SEC = 5
 MAXIMUM_PROFILE_TIMEOUT_SEC = 60
