@@ -8,25 +8,26 @@ setuptools.setup(
     version="0.0.1",
     author="Dino Hensen",
     author_email="dino.hensen+xmrigthrottle@gmail.com",
-    description=
-    "Program that switches between xmrig profiles according to your computer usage.",
+    description="Program that switches between xmrig profiles according to your computer usage.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/dhensen/xmrig-auto-idle-throttler",
     packages=setuptools.find_packages(),
     install_requires=[
-        'requests',
+        "requests",
     ],
-    extras_require={'dev': [
-        'pytest',
-        'pytest-cov',
-        'black',
-        'pylint',
-    ]},
+    extras_require={
+        "dev": [
+            "pytest",
+            "pytest-cov",
+            "black",
+            "pylint",
+        ]
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.6',
+    python_requires=">=3.6",
 )
