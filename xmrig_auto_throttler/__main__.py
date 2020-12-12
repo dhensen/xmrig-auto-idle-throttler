@@ -63,7 +63,7 @@ def deactivate():
     activated = False
 
 
-if __name__ == "__main__":
+def main():
     if sys.platform == "linux" and not has_dependency("xprintidle"):
         logger.info("you have to install xprintidle first")
         sys.exit(1)
@@ -84,3 +84,7 @@ if __name__ == "__main__":
             time.sleep(RESOLUTION_SEC)
     except KeyboardInterrupt:
         logger.info("program stopped by user")
+
+
+if __name__ == "__main__":
+    sys.exit(main())
