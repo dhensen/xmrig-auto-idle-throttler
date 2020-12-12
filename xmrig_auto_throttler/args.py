@@ -8,7 +8,7 @@ def get_args(args=None) -> argparse.Namespace:
         dest="interval",
         default=5,
         help="Interval in seconds between (not)idle checks. This must be smaller than min-profile-timeout",
-        type=int
+        type=int,
     )
     parser.add_argument(
         "--max-profile-timeout",
@@ -17,7 +17,7 @@ def get_args(args=None) -> argparse.Namespace:
         const=True,
         nargs="?",
         help="When minimum-profile is active (PC is being used by you), your idle time must be above min-profile-timeout to switch to maximum-profile.",
-        type=int
+        type=int,
     )
     parser.add_argument(
         "--min-profile-timeout",
@@ -26,7 +26,7 @@ def get_args(args=None) -> argparse.Namespace:
         const=True,
         nargs="?",
         help="When maximum-profile is active (PC not used), your idle time must be below min-profile-timeout to switch to minimum-profile. This must be bigger than interval.",
-        type=int
+        type=int,
     )
     parser.add_argument(
         "--xmrig-api-url",
@@ -34,6 +34,13 @@ def get_args(args=None) -> argparse.Namespace:
         default="http://127.0.0.1:8000",
         nargs="?",
         help="xmrig host url, for example http://127.0.0.1:8000",
+    )
+    parser.add_argument(
+        "--xmrig-api-token",
+        dest="xmrig_api_token",
+        default="",
+        nargs="?",
+        help="xmrig api token",
     )
 
     return parser.parse_args(args)

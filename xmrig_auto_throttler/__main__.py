@@ -23,7 +23,7 @@ class AutoThrottler:
         maximum_profile_timeout_sec=60,
         minimum_profile_timeout_sec=10,
         xmrig_host="http://127.0.0.1:8810",
-        xmrig_port="foobar",
+        xmrig_token=None,
     ) -> None:
         super().__init__()
         assert interval < minimum_profile_timeout_sec
@@ -31,7 +31,7 @@ class AutoThrottler:
         self.max_profile_timeout = maximum_profile_timeout_sec
         self.min_profile_timeout = minimum_profile_timeout_sec
         self.activated = False
-        self.xmrig_http_client = XmrigClient(xmrig_host, xmrig_port)
+        self.xmrig_http_client = XmrigClient(base_url=xmrig_host, token=xmrig_token)
 
     def is_active(self):
         return self.activated
@@ -74,6 +74,7 @@ def main():
         maximum_profile_timeout_sec=args.max_profile_timeout,
         minimum_profile_timeout_sec=args.min_profile_timeout,
         xmrig_host=args.xmrig_api_url,
+        xmrig_token=args.xmrig_api_token,
     )
 
     try:
