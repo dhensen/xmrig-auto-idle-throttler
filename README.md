@@ -25,3 +25,5 @@ pip3 install xmrig-auto-throttler
 ## Donate
 
 Please consider a donation if you find this program useful.
+
+- XMR: 4AeP7Piu23yDrYS3dmDMbc3jVzLKbP8QVcBPi9NW5ywKQwgH47ekGr6fjPzGS6WwGQaYTeXC72pSuiVvoXqfrcMH8qKe174
